@@ -1,10 +1,10 @@
-package com.tekmentor.authenticationservice;
+package com.tekmentors.authentication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthenticationServiceApplicationTests {
+class AuthenticationApplicationTests {
 
     @Test
     void contextLoads() {
