@@ -15,5 +15,6 @@
     </properties>
     <modules>
         <module>./productservice</module>
+        <module>./authentication</module>
     </modules>
 </project>
