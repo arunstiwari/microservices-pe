@@ -20,5 +20,6 @@
         <module>./basketservice</module>
         <module>./cartservice</module>
         <module>./orderservice</module>
+        <module>./shippingsvc</module>
     </modules>
 </project>
