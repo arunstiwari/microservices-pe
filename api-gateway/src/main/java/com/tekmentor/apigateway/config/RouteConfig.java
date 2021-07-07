@@ -28,6 +28,10 @@ public class RouteConfig {
                         .path("/customers/**")
                         .uri("lb://CUSTOMER-SERVICE")
                 )
+                .route("category-service", p -> p
+                        .path("/categories/**")
+                        .uri("lb://PRODUCT-SERVICE")
+                )
                 .build();
     }
 }

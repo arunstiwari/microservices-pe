@@ -8,6 +8,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/productservice
     username: arunstiwari
     password: Shobhit2401!
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,10 +18,5 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
-    instance:
-      hostname: localhost
-
-products:
-      customerservice: http://CUSTOMER-SERVICE
-
-
+  instance:
+    hostname: localhost
