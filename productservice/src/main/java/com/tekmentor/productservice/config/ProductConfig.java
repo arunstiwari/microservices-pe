@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 @ConfigurationProperties(prefix = "products")
 public class ProductConfig {
-    private String customerservice;
+    private String customerService;
 
     @Bean
     public RestTemplate restTemplate(){

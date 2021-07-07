@@ -19,6 +19,7 @@ public class CustomerController {
 
     @GetMapping("/customers")
     public ResponseEntity fetchAllCustomers(){
+        log.info(" Going to return all customers info");
         List<Customer> customers = customerService.fetchAllCustomers();
         return new ResponseEntity(customers, HttpStatus.OK);
     }

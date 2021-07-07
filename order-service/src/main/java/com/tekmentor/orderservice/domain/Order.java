@@ -1,0 +1,22 @@
+package com.tekmentor.orderservice.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ORDERS")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Order {
+    @Id
+    private String id;
+    private String name;
+    private int qty;
+    private double price;
+}

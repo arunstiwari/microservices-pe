@@ -2,6 +2,7 @@ package com.tekmentor.productservice.controller;
 
 import com.tekmentor.productservice.config.ProductConfig;
 import com.tekmentor.productservice.model.Customer;
+import com.tekmentor.productservice.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,16 +15,15 @@ import java.util.List;
 @Slf4j
 public class ProductController {
     @Autowired
-    private RestTemplate restTemplate;
+    private ProductService productService;
 
     @Autowired
     private ProductConfig config;
 
     @GetMapping("/products")
     public String showProducts(){
-        List<Customer> customers = restTemplate.getForObject(config.getCustomerservice() + "/customers",
-                List.class);
-        log.info(" customers : {}",customers);
+        log.info("Showing the products {}",config.getCustomerService());
+            productService.showProducts();
         return "Products";
     }
 }
