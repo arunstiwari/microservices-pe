@@ -1,0 +1,21 @@
+server:
+  port: 9094
+
+spring:
+  application:
+    name: CUSTOMER-SERVICE
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customersvc
+    username: arunstiwari
+    password: Shobhit2401!
+  jpa:
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost

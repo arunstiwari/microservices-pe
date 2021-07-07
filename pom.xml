@@ -16,7 +16,7 @@
     <modules>
         <module>./productservice</module>
         <module>./authentication</module>
-        <module>./categorysvc</module>
+        <module>./customerservice</module>
         <module>./basketservice</module>
         <module>./cartservice</module>
         <module>./orderservice</module>
