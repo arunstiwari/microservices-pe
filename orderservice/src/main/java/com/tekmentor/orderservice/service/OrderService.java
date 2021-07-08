@@ -8,6 +8,7 @@ import com.tekmentor.orderservice.model.Order;
 import com.tekmentor.orderservice.model.OrderItem;
 import com.tekmentor.orderservice.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,7 +26,11 @@ public class OrderService {
     @Autowired
     private OrderConfig config;
 
+    @Autowired
+    private KafkaTemplate<String,String> kafkaTemplate;
+
     public List<Order> fetchAllOrders() {
+       kafkaTemplate.send("shipping-topic","New orders have arrived - 123");
         return orderRepository.findAll();
     }
 

@@ -24,4 +24,20 @@ public class KafkaConsumer {
         log.info("Goods have been delivered");
     }
 
+    @KafkaListener(topics = "orders-topic")
+    public void consumeOrderConfirmationEvents(String message) throws InterruptedException {
+        log.info("New message in shipping topic : {}",message);
+
+        Thread.sleep(1000);
+        log.info("Prepairing for dispatch");
+
+
+        Thread.sleep(1000);
+        log.info("Shipped the good");
+
+
+        Thread.sleep(1000);
+        log.info("Goods have been delivered");
+    }
+
 }
