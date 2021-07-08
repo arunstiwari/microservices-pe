@@ -1,0 +1,23 @@
+server:
+  port: 9096
+
+spring:
+  application:
+    name: BASKET-SERVICE
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+
+baskets:
+  orderservice: http://ORDER-SERVICE
+  paymentservice: http://PAYMENT-SERVICE
+  shippingservice: http://SHIPPING-SERVICE
+  notificationservice: http://NOTIFICATION-SERVICE
+  cartservice: http://CART-SERVICE

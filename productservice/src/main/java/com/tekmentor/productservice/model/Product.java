@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "products")
-public class Product {
+public class Product extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

@@ -11,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "categories")
-public class Category {
+public class Category extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

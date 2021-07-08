@@ -16,15 +16,16 @@
     <modules>
         <module>./productservice</module>
         <module>./authentication</module>
-        <module>./customerservice</module>
+        <module>./customersvc</module>
         <module>./basketservice</module>
         <module>./cartservice</module>
         <module>./orderservice</module>
-        <module>./shippingsvc</module>
-        <module>./order-service</module>
-        <module>./payment-service</module>
+        <module>./shippingservice</module>
+        <module>./orderservice</module>
         <module>./service-discovery</module>
         <module>./api-gateway</module>
+        <module>./NotificationService</module>
+        <module>./paymentservice</module>
 
     </modules>
 </project>

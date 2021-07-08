@@ -3,9 +3,10 @@ package com.tekmentor.productservice.service;
 import com.tekmentor.productservice.exception.ProductNotFoundException;
 import com.tekmentor.productservice.model.Product;
 import com.tekmentor.productservice.repository.ProductRepository;
+import org.springframework.stereotype.Service;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;

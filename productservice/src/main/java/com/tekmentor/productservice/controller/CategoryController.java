@@ -24,7 +24,7 @@ public class CategoryController {
 
     @RequestMapping("/categories/{id}")
     public ResponseEntity showCategories(@PathVariable("id") long id){
-        Category category = categoryService.findCategoryById(id);
+       Category category = categoryService.findCategoryById(id);
         return new ResponseEntity(category, HttpStatus.OK);
     }
 
