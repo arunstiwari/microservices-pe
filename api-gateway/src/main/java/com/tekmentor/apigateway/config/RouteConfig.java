@@ -13,7 +13,7 @@ public class RouteConfig {
         return routeLocatorBuilder.routes()
                 .route("order-service", p -> p
                         .path("/orders/**")
-//                        .filters(f -> f.circuitBreaker(c -> c.setName("orders fallback").setFallbackUri("/orderFallBack")))
+                        .filters(f -> f.circuitBreaker(c -> c.setName("orders fallback").setFallbackUri("/orderFallBack")))
                         .uri("lb://ORDER-SERVICE")
                 )
                 .route("payment-service", p -> p
@@ -22,6 +22,7 @@ public class RouteConfig {
                 )
                 .route("product-service", p -> p
                         .path("/products/**")
+                        .filters(f -> f.circuitBreaker(c -> c.setName("orders fallback").setFallbackUri("/orderFallBack")))
                         .uri("lb://PRODUCT-SERVICE")
                 )
                 .route("customer-service", p -> p
