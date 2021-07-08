@@ -25,11 +25,11 @@ chaos:
       rest-controller: true
       service: true
     assaults:
-      exceptions-active: true
+      exceptions-active: false
       kill-application-active: false
       latency-active: true
-      latency-range-start: 1000
-      latency-range-end: 2000
+      latency-range-start: 5000
+      latency-range-end: 10000
       level: 1
 
 eureka:
